@@ -1,26 +1,30 @@
 import React from "react";
 import PropTypes from "prop-types";
+import { Section, GlobalStyle, Table, Th, Td, Tr } from "./styled";
 
 const TransactionHistory = ({ transctions }) => (
-  <table class="transaction-history">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Amount</th>
-        <th>Currency</th>
-      </tr>
-    </thead>
-
-    <tbody>
-      {transctions.map(({ id, type, amount, currency }) => (
-        <tr key={id}>
-          <td>{type}</td>
-          <td>{amount}</td>
-          <td>{currency}</td>
+  <Section>
+    <GlobalStyle />
+    <Table>
+      <thead>
+        <tr>
+          <Th>Type</Th>
+          <Th>Amount</Th>
+          <Th>Currency</Th>
         </tr>
-      ))}
-    </tbody>
-  </table>
+      </thead>
+
+      <tbody>
+        {transctions.map(({ id, type, amount, currency }) => (
+          <Tr key={id}>
+            <Td>{type}</Td>
+            <Td>{amount}</Td>
+            <Td>{currency}</Td>
+          </Tr>
+        ))}
+      </tbody>
+    </Table>
+  </Section>
 );
 
 TransactionHistory.propTypes = {

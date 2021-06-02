@@ -1,11 +1,14 @@
 import React from "react";
 import PropTypes from "prop-types";
 import FriendListItem from "./FriendListItem";
+import { Section, Ul } from "./styled";
 
 const FriendList = ({ friends }) => (
-  <ul class="friend-list">
-    <FriendListItem friends={friends} />
-  </ul>
+  <Section>
+    <Ul>
+      <FriendListItem friends={friends} />
+    </Ul>
+  </Section>
 );
 
 FriendList.propTypes = {

@@ -1,12 +1,13 @@
 import React from "react";
+import { Span, Img, Li, P } from "./styled";
 
 const FriendListItem = ({ friends }) =>
   friends.map(({ avatar, name, isOnline, id }) => (
-    <li class="item" key={id}>
-      <span class="status"></span>
-      <img class="avatar" src={avatar} alt="аватар пользователя" width="48" />
-      <p class="name">{name}</p>
-    </li>
+    <Li class="item" key={id}>
+      {isOnline ? <Span online /> : <Span />}
+      <Img src={avatar} alt="аватар пользователя" />
+      <P class="name">{name}</P>
+    </Li>
   ));
 
 export default FriendListItem;
