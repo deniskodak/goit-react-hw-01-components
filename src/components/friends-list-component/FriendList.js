@@ -6,7 +6,9 @@ import { Section, Ul } from "./styled";
 const FriendList = ({ friends }) => (
   <Section>
     <Ul>
-      <FriendListItem friends={friends} />
+      {friends.map((friend) => (
+        <FriendListItem key={friend.id} friend={friend} />
+      ))}
     </Ul>
   </Section>
 );

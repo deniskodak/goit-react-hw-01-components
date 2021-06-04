@@ -13,13 +13,11 @@ import TransactionHistory from "./components/transactions-component/TransactionH
 const App = () => (
   <>
     <Profile
-      src={user.avatar}
+      avatar={user.avatar}
       name={user.name}
       location={user.location}
       tag={user.tag}
-      followers={user.stats.followers}
-      views={user.stats.views}
-      likes={user.stats.likes}
+      stats={user.stats}
     />
     <Statistics stats={statistics} />
     <Statistics title="Upload stats" stats={statistics} />

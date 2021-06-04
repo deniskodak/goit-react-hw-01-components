@@ -16,7 +16,7 @@ const Div = styled.div`
     text-align: center;
   }
 
-  &.profile-card {
+  &.profile {
     width: calc(100% / 3);
     box-shadow: 8px 0px 0px 0px #dcd0c0, 0px 8px 0px 0px #b1938b,
       -8px 0px 0px 0px #4e4e56, 0px 0px 0px 8px #da635d,
@@ -31,10 +31,15 @@ const Img = styled.img`
 
 const P = styled.p`
   margin: 0;
-  font-size: ${(props) => (props.name ? "18px" : "14px")};
-  font-weight: ${(props) => (props.name ? "600" : "400")};
-  color: ${(props) => (props.name ? "black" : "rgb(148 165 203)")};
+  font-size: "14px";
+  font-weight: "400";
+  color: "rgb(148 165 203)";
 
+  &.name {
+    font-size: 18px;
+    font-weight: 600;
+    color: black;
+  }
   &: nth-child(2) {
     margin-top: 8px;
   }

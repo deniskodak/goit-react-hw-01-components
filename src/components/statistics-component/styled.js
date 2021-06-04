@@ -37,7 +37,11 @@ const Li = styled.li`
 `;
 
 const Span = styled.span`
-  font-size: ${(props) => (props.percentage ? "18px" : "11px")};
+  font-size: 11px;
+
+  &.percentage {
+    font-size: 18px;
+  }
 `;
 
 export { Section, Title, Ul, Li, Span };
