@@ -18,9 +18,9 @@ const Div = styled.div`
 
   &.profile {
     width: calc(100% / 3);
-    box-shadow: 8px 0px 0px 0px #dcd0c0, 0px 8px 0px 0px #b1938b,
-      -8px 0px 0px 0px #4e4e56, 0px 0px 0px 8px #da635d,
-      5px 5px 15px 5px rgba(165, 230, 255, 0);
+    box-shadow: rgb(78 78 86) 3px 0px 0px 0px, rgb(78 78 86) 0px 3px 0px 0px,
+      rgb(78 78 86) -4px 0px 0px 0px, rgb(81 154 165) 0px 0px 0px 2px,
+      rgb(165 230 255 / 0%) 5px 5px 15px 5px;
   }
 `;
 
